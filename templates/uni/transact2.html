@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title> Buy/Sell Board</title>
+</head>
+<body>
+<h1>Let's sell something</h1>
+<form action="decrease/" method="post">
+{% csrf_token %}
+Quantity : <input type="text" value="0" name="quantity">
+
+<select name="choice">
+
+{% for key, keyvalues in temp.items %}
+    {% if keyvalues != None %}
+     <option value="{{key}}"> {{key}} </option>
+    {% endif %}
+{% endfor %}
+
+</select>
+
+<br>
+<input type="submit" value="Sell" />
+</form>
+</body>
+</html>

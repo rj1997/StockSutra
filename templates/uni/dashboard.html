@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>
+		Dashboard
+	</title>
+</head>
+<body>
+<h1 align="center"> My Dashboard </h1>
+<p>You currently have {{ AAPL }} AAPL stocks.</p>
+<p>You currently have {{ CSCO }} CSCO stocks.</p>
+<p>You currently have {{ CAT }} CAT stocks.</p>
+<p>You currently have {{ BA }} BA stocks.</p>
+<p>You currently have {{ CVX }} CVX stocks.</p>
+<form action="buy/" method="post">
+{% csrf_token %}
+    <input type="submit" value="Buy some" />
+</form>
+<form action="sell/" method="post">
+{% csrf_token %}
+    <input type="submit" value="Sell some" />
+</form>
+
+<form action="writeblog/" method="post">
+{% csrf_token %}
+<input type="submit" value="Contribute to the blog">
+</form>
+
+</body>
+</html>

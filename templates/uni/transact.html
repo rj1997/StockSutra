@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title> Buy/Sell Board</title>
+</head>
+<body>
+<h1>Let's buy something</h1>
+<form action="increase/" method="post">
+{% csrf_token %}
+Quantity : <input type="text" value="0" name="quantity">
+
+<select name="choice">
+  <option value="AAPL">AAPL</option>
+  <option value="CSCO">CSCO</option>
+  <option value="CAT">CAT</option>
+  <option value="BA">BA</option>
+  <option value="CVX">CVX</option>
+</select>
+<br>
+<input type="submit" value="Buy" />
+</form>
+</body>
+</html>

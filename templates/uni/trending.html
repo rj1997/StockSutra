@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title> Trending </title>
+</head>
+<body onload="detailloader();">
+
+
+<h1 align="center"> Trending these days </h1>
+	<table align="center" 	style="width:80%">
+	
+
+
+	
+	
+	<tr align="center">
+	<th> Stocks </th>
+	{% for key, values in ticker.items %}
+        <th>{{ values }}</th>
+        {% endfor %}
+    </tr>
+    
+
+    <tr align="center">
+    <th> High </th>
+	{% for key, values in high.items %}
+        <td>{{ values }}</td>
+        {% endfor %}
+    </tr>
+
+    <tr align="center">
+    <th> Low </th>
+	{% for key, values in low.items %}
+        <td>{{ values }}</td>
+        {% endfor %}
+    </tr>
+
+
+    <tr align="center">
+    <th> Close </th>
+	{% for key, values in close.items %}
+        <td>{{ values }}</td>
+        {% endfor %}
+    </tr>
+
+
+    <tr align="center">
+    <th> Open </th>
+	{% for key, values in open.items %}
+        <td>{{ values }}</td>
+        {% endfor %}
+    </tr>
+
+
+    <tr align="center">
+    <th> Gain/Loss </th>
+	{% for key, values in open.items %}
+        <td>{{ values }}</td>
+        {% endfor %}
+    </tr>
+
+
+    <tr align="center">
+    <th> Buy Price </th>
+	{% for key, values in open.items %}
+        <td>{{ values }}</td>
+        {% endfor %}
+    </tr>
+
+<p id="temp"> </p>
+
+<br>
+<br>
+<br>
+
+<script>
+
+function detailloader(){
+    var v1 = {{ AAPL }};
+var v2 = {{ CSCO }};
+var v3 = {{ CAT }};
+var v4 = {{ BA }};
+var v5 = {{ CVX }};
+
+if(v1!=0)
+    document.getElementById('temp')=v1;
+else
+    document.getElementById('temp')="Manhattan";
+
+
+}
+
+
+
+
+
+</script>
+    <tr align="center">
+    <th></th>
+    {% for key, values in open.items %}
+        <td><a href='#'> Buy</a></td>
+    {% endfor %}
+    </tr>
+
+    <tr align="center">
+    <th></th>
+    {% for key, keyvalues in values.items %}
+        {% if keyvalues != None %}
+        <td><a href='#'>Sell</a></td>
+        
+        {% else %}
+        <td></td>
+        {% endif %}
+        {% endfor %}
+    </tr>
+	
+
+
+
+	</table>
+
+</body>
+</html>

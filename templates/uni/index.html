@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+{% load static %}
+<!--
+Template Name: Corklow
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html>
+<head>
+<title>StockSutra</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row0">
+  <div id="topbar" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="fl_left">
+      <ul class="nospace">
+        <li><i class="fa fa-phone"></i> 1800 11 2424</li>
+        <li><i class="fa fa-envelope-o"></i> contactus@stocksutra.com</li>
+      </ul>
+    </div>
+    <div class="fl_right">
+      <ul class="nospace">
+        <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
+        <li><a href="about/">About</a></li>
+        <li><a href="contact/">Contact</a></li>
+    {% if user.is_authenticated %}
+    <li><a href="dashboard/">Portfolio</a></li>
+    <li><a href="logout">Logout</a></li>
+    {% else %}
+      <li><a href="login">Login</a></li>
+      <li><a href="register">Sign up</a></li>
+    {% endif %}
+
+    
+
+
+
+        
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1><a href="index.html">StockSutra</a></h1>
+      <p>The easiest way ever</p>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a class="drop" href="#">Pages</a>
+          <ul>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Full Width</a></li>
+            <li><a href="#">Sidebar Left</a></li>
+            <li><a href="#">Sidebar Right</a></li>
+            <li><a href="#">Basic Grid</a></li>
+          </ul>
+        </li>
+        <li><a class="drop" href="#">Dropdown</a>
+          <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Level 2</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Link Text</a></li>
+        <li><a href="#">Link Text</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper bgded overlay" style="background-image: url('{% static 'images/demo/backgrounds/320x220.jpeg' %}')";>
+  <div id="pageintro" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <article>
+      <p class="heading">We will teach you how to invest</p>
+      <h2 class="heading"><span class="block">Stock Market</span> Made simple</h2>
+      <footer><a href="#">A product by: MGM Pvt. Ltd. &raquo;</a></footer>
+    </article>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <div id="services" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="table">
+      <div class="table-row"> 
+        <!-- ################################################################################################ -->
+        <div class="table-cell">
+          <article><a href="#"><i class="fa fa-key"></i></a>
+            <h6 class="heading">Introduction to the market</h6>
+            <p>The stock market has nifty and sensex. Depending upon raises and lows, it's an addictive investment approach.</p>
+            <footer><a href="#">Read More &raquo;</a></footer>
+          </article>
+        </div>
+        <div class="table-cell">
+          <article><a href="trending"><i class="fa fa-lastfm"></i></a>
+            <h6 class="heading">What's hot these days</h6>
+            <p>Witness the best of upcoming stocks, a list made by our experts.</p>
+            <footer><a href="#">Read More &raquo;</a></footer>
+          </article>
+        </div>
+        <div class="table-cell">
+          <article><a href="news"><i class="fa fa-angellist"></i></a>
+            <h6 class="heading">News and experts' analysis</h6>
+            <p>True investment advices from experts as well as users. Will teach you how to invest.</p>
+            <footer><a href="#">Read More &raquo;</a></footer>
+          </article>
+        </div>
+        <!-- ################################################################################################ -->
+      </div>
+    </div>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="center btmspace-80">
+      <h3 class="heading"><b> See our other products</b></h3>
+      <p class="nospace"></p>
+    </div>
+    <ul class="nospace group cta">
+      <li class="one_third first">
+        <article><a href="#"><i class="fa fa-line-chart"></i></a>
+          <h6 class="heading">MGM BlockChain</h6>
+          <p>Watch the cryptocurrencies to chase. &hellip;</p>
+          <footer><a href="#">Read More &raquo;</a></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="fa fa-audio-description"></i></a>
+          <h6 class="heading">MGM Crypto</h6>
+          <p>Watch the cryptocurrencies to chase.&hellip;</p>
+          <footer><a href="#">Read More &raquo;</a></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="fa fa-balance-scale"></i></a>
+          <h6 class="heading">MGM Colleges</h6>
+          <p>The colleges we have collaborations between. &hellip;</p>
+          <footer><a href="#">Read More &raquo;</a></footer>
+        </article>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row4">
+  <footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <h3 class="heading">Stocksutra</h3>
+    <ul class="nospace inline pushright uppercase">
+      <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="login">Login</a></li>
+      <li><a href="register">Register</a></li>
+    </ul>
+    <ul class="faico clear">
+      <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+      <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+      <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+      <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+      <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+      <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
+    </ul>
+    <div id="copyright">
+      <p>Copyright &copy; 2018 - All Rights Reserved - <a href="#">www.mgm.com</a></p>
+      
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="{% static 'layout/scripts/jquery.min.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.backtotop.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.mobilemenu.js'%}"></script>
+</body>
+</html>

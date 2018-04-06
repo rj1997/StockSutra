@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Write Blog </title>
+</head>
+<body>
+
+<form action="postblog/" method="post">
+{% csrf_token %}
+<h1 align="center"> Post your blog here </h1>
+Title : <br>
+<input type="text" name="title" size="100"><br>
+Content : <br>
+<textarea rows="20" cols="140" name="content"></textarea><br> 
+<input type="submit" value="Post"/>
+</form>
+
+</body>
+</html>

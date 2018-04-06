@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title> LOG </title>
+</head>
+<body onload="myfunction()">
+
+The stocks were updated. <br>
+<p>You currently have {{ AAPL }} AAPL stocks.</p>
+<p>You currently have {{ CSCO }} CSCO stocks.</p>
+<p>You currently have {{ CAT }} CAT stocks.</p>
+<p>You currently have {{ BA }} BA stocks.</p>
+<p>You currently have {{ CVX }} CVX stocks.</p>
+
+<script>
+function myfunction(){
+	var f = {{flag}}
+	if(f==1)
+		alert('You dont have enough stocks of this kind')
+}
+
+</script>
+</body>
+</html>

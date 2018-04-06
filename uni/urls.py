@@ -1,0 +1,26 @@
+from django.conf.urls import patterns, url
+from uni import views
+
+urlpatterns = patterns('',
+	url(r'^$',views.index,name='index'),
+	url(r'^about/$',views.about,name='about'),
+	url(r'^contact/$',views.contact,name='contact'),
+	url(r'^login/$',views.user_login,name='login'),
+	url(r'^register/$',views.register,name='register'),
+	url(r'^parent/$',views.parent,name='parent'),
+	url(r'^intro/$',views.intro,name='intro'),
+	url(r'^trending/$',views.trending,name='trending'),
+	url(r'^news/$',views.news,name='news'),
+	url(r'^blockchain/$',views.blockchain,name='blockchain'),
+	url(r'^crypto/$',views.crypto,name='crypto'),
+	url(r'^colleges/$',views.colleges,name='colleges'),
+	url(r'^logout/$', views.user_logout, name='logout'),
+	url(r'^portfolio/$', views.user_portfolio, name='portfolio'),
+	url(r'^dashboard/$', views.dashboard, name='dashboard'),
+	url(r'^dashboard/buy/$', views.transact, name='buyboard'),
+	url(r'^dashboard/sell/$', views.transact2, name='sellboard'),
+	url(r'^dashboard/buy/increase/$', views.increase, name='buyboard'),
+	url(r'^dashboard/sell/decrease/$', views.decrease, name='sellboard'),
+	url(r'^dashboard/writeblog/$',views.writeblog,name='writeblog'),
+	url(r'^dashboard/writeblog/postblog/$',views.postblog,name='postblog'),
+	)
